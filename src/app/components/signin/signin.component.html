@@ -1,0 +1,26 @@
+<div class="basic-form">
+    <label class="title">Sign In to test</label>
+
+    <form [formGroup]="formGroup" (submit)="onSignin()">
+        <div class="input-group">
+            <label class="input">Email</label>
+            <input type="text" formControlName="email" />
+        </div>
+        <ng-container
+            *ngIf="formGroup.get('email').invalid && (formGroup.get('email').dirty || formGroup.get('email').touched)">
+            <span *ngIf="formGroup.get('email').errors.required">
+                Required
+            </span>
+            <span *ngIf="formGroup.get('email').errors.error">
+                {{formGroup.get('email').errors.error}}
+            </span>
+            <span *ngIf="formGroup.get('email').errors.pattern">
+                Email is not valid
+            </span>
+        </ng-container>
+        <div class="button-group">
+            <button routerLink="/signup">create an account</button>
+            <button type="submit" [disabled]="formGroup.invalid">sign in</button>
+        </div>
+    </form>
+</div>

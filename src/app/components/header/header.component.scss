@@ -1,0 +1,13 @@
+:host {
+    div {
+        padding: 38px 74px;
+        @media screen and (max-width: 550px) {
+            padding: 28px 54px;
+        }
+    }
+    font-weight: 900;
+    font-size: 2em;
+    span {
+        font-size: 0.4em;
+    }
+}

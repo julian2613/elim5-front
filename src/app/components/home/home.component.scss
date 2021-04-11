@@ -1,0 +1,89 @@
+.content {
+    display: flex;
+    div.seccion {
+        width: 50%;
+
+        &.minion {
+            padding: 20px;
+        }
+    }
+
+    div.text {
+        .list-buttons {
+            position: relative;
+
+            .modal-buttons {
+                z-index: 2;
+                position: absolute;
+                top: -180px;
+                display: flex;
+                flex-direction: column;
+                button {
+                    margin-bottom: 10px;
+                    background-color: black;
+                }
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                    position: absolute;
+                    top: -50px;
+                    right: -40px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .subtitle {
+        color: #e2709c;
+        font-weight: 900;
+        font-size: 0.85em;
+    }
+
+    .body {
+        margin: 14px 0px;
+        font-weight: 900;
+        font-size: 2em;
+    }
+
+    .caption {
+        font-size: 1.2em;
+        margin-bottom: 70px;
+    }
+}
+
+button {
+    width: 200px;
+}
+
+@media screen and (max-width: 1000px) {
+    .content {
+        flex-direction: column;
+        div.seccion {
+            width: 100%;
+            &.minion {
+                padding: 20px 0px;
+            }
+        }
+
+        div.text {
+            display: flex;
+            flex-direction: column;
+            .list-buttons {
+                margin: auto;
+            }
+        }
+    }
+}
+
+.modal {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0.6;
+    z-index: 1;
+}

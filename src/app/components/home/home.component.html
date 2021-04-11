@@ -1,0 +1,21 @@
+<div class="content">
+  <div class="seccion text">
+    <span class="subtitle">Welcome to the Interactive Demo</span>
+    <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh</p>
+    <p class="caption">Lorem ipsum dolor si ameting</p>
+    <div class="list-buttons">
+      <div class="modal-buttons" [ngStyle]="{'display' : showModal ? 'flex' : 'none'}">
+        <img src="./../../../assets/svg/close-icon.svg" (click)="showModal = false">
+        <button (click)="navigate('Demo 1')" queryParamsHandling="merge">Demo 1</button>
+        <button (click)="navigate('Demo 2')" queryParamsHandling="merge">Demo 2</button>
+        <button (click)="navigate('Demo 3')" queryParamsHandling="merge">Demo 3</button>
+      </div>
+      <button (click)="showModal = true">start demo</button>
+    </div>
+  </div>
+  <div class="seccion minion">
+    <app-minion></app-minion>
+  </div>
+</div>
+
+<div [ngClass]="{'modal' : showModal }"></div>

@@ -1,0 +1,34 @@
+<div class="content">
+    <div>
+        <div>
+            <p>Pole</p>
+            <div class="color-sketch">
+                <color-sketch [color]="darkColor" (onChangeComplete)="changeCompleteDarkColor($event)"></color-sketch>
+            </div>
+        </div>
+        <div>
+            <p>Flag</p>
+            <div class="color-sketch">
+                <color-sketch [color]="backgroundFlag" (onChangeComplete)="changeCompleteBackgroundColor($event)">
+                </color-sketch>
+            </div>
+        </div>
+        <div>
+            <p>Body</p>
+            <div class="color-sketch">
+                <color-sketch [color]="primaryColor" (onChangeComplete)="changeCompletePrimaryColor($event)">
+                </color-sketch>
+            </div>
+        </div>
+    </div>
+    <div class="minion">
+        <app-minion [darkColor]="darkColor" [backgroundFlag]="backgroundFlag" [primaryColor]="primaryColor">
+        </app-minion>
+    </div>
+    <hr>
+
+    <div #optionSelected *ngIf="option">
+        The option selected was: {{option}}
+    </div>
+
+</div>

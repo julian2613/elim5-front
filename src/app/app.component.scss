@@ -1,0 +1,30 @@
+.main {
+    min-height: 92vh;
+    position: relative;
+    padding-bottom: 8vh;
+
+    .container {
+        padding: 38px 74px 74px;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        background-color: #f6a8bd;
+        width: 100%;
+        padding: 25px 0px;
+        font-size: 0.6em;
+        p {
+            margin: 0;
+            padding-left: 74px;
+            padding-right: 74px;
+            font-weight: 900;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .container {
+        padding: 28px 54px;
+    }
+}

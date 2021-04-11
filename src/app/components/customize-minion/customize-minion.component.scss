@@ -1,0 +1,19 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    > div {
+        margin: auto;
+        width: 90%;
+        display: flex;
+        > div {
+            margin: 0px 10px;
+        }
+        &.minion {
+            margin: 20px auto;
+        }
+    }
+    app-minion {
+        width: 60%;
+        margin: auto;
+    }
+}

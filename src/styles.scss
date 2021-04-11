@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+$fontFamily: "Open Sans";
+$buttonBackgroundColor: #6f6f6f;
+$buttonColor: #ffffff;
+$buttonHoverBackgroundColor: #ffffff;
+$buttonHoverColor: #4b4b4b;
+
+$primary-color: #f6a8bd;
+
+body {
+    height: 100vh;
+    font-family: $fontFamily;
+    font-size: 24px;
+    margin: 0px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+    font-family: $fontFamily;
+    font-size: 16px;
+    font-weight: 500;
+
+    width: 100%;
+    height: 40px;
+    padding: 0px 16px;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $primary-color;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus {
+    box-shadow: 0 0 0 1px $primary-color;
+    outline: none;
+}
+
+button {
+    font-family: $fontFamily;
+    font-size: 16px;
+    font-weight: 900;
+
+    text-transform: uppercase;
+    user-select: none;
+
+    outline: none;
+    border: none;
+    border-radius: 20px;
+
+    height: 45px;
+    padding-left: 26px;
+    padding-right: 26px;
+}
+
+button:enabled {
+    background-color: $buttonBackgroundColor;
+    color: $buttonColor;
+    cursor: pointer;
+}
+
+button:enabled:hover {
+    background-color: $buttonHoverBackgroundColor;
+    box-shadow: 0 0 0 1.5pt $buttonBackgroundColor;
+    color: $buttonHoverColor;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.basic-form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #dcdcdc;
+    font-size: 0.8em;
+    width: 30%;
+    margin: auto;
+    background: #f6a8bd1f;
+    padding: 58px;
+    border-radius: 14px;
+    label.title {
+        font-weight: bold;
+        margin: auto;
+        margin-bottom: 20px; 
+    }
+    label.input {
+        font-size: 0.8em;
+        margin-bottom: 10px;
+    }
+    .button-group {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 25px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    body {
+        font-size: 20px;
+    }
+    .basic-form {
+        width: 60%
+    }
+}
+@media screen and (max-width: 550px) {
+    body {
+        font-size: 16px;
+    }
+
+    .basic-form {
+        width: 80%
+    }
+
+    footer {
+        p {
+            font-size: 1em;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+    }
+}
+
